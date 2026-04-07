@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.scss";
-import Cash from "../cash/Cash";
+import Cash from "../cash/Cash.jsx";
 
 const Hero = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Home.scss";
-import BannerSlider from "../swiper/BannerSlider";
-import Payments from "../payments/Payments";
+import BannerSlider from "../swiper/BannerSlider.jsx";
+import Payments from "../payments/Payments.jsx";
 
 const HomeContent = () => {
   return (
