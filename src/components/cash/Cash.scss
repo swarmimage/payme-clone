@@ -1,0 +1,19 @@
+.cashback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #26e7fe;
+  height: 55px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  &_wrapper {
+    text-align: center;
+    &-text{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      color: #3F3F46;
+    }
+  }
+}

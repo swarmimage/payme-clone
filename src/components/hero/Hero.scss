@@ -1,0 +1,118 @@
+.hero {
+  background-color: #1ababa;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+
+    &-account {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #6aad5b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  &__mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    & > p {
+      color: white;
+      font-size: 16px;
+    }
+
+    &-money {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      p {
+        color: white;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      &-valut {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        align-self: flex-end;
+        margin-bottom: 6px;
+
+        &::after {
+          content: "сум";
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      p {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
