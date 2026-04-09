@@ -1,0 +1,135 @@
+// ============================
+// Переменные
+// ============================
+$card-bg: #ffffff;
+$card-radius: 16px;
+$card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+$card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.14);
+$card-width: 140px;
+$card-height: 120px;
+$card-padding: 14px;
+$card-gap: 12px;
+
+$accent-color: #2563eb;
+$accent-light: #eff6ff;
+$text-primary: #1e293b;
+$text-secondary: #64748b;
+$badge-color: #10b981;
+$badge-bg: #ecfdf5;
+
+$transition-speed: 0.25s;
+$transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ============================
+// Обёртка списка карточек
+// ============================
+.patmentscard-list {
+  gap: $card-gap;
+  padding: 8px 0;
+}
+
+// ============================
+// Карточка
+// ============================
+.patmentscard {
+  width: $card-width;
+  height: $card-height;
+  background: $card-bg;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  cursor: pointer;
+  transition:
+    transform $transition-speed $transition-ease,
+    box-shadow $transition-speed $transition-ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $card-shadow-hover;
+
+    .patmentscard_wrapper-top img {
+      transform: scale(1.08);
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: $card-shadow;
+  }
+}
+
+// ============================
+// Внутренняя обёртка
+// ============================
+.patmentscard_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: $card-padding;
+  box-sizing: border-box;
+}
+
+// ============================
+// Верхняя часть: бейдж + иконка
+// ============================
+.patmentscard_wrapper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-size: 11px;
+    font-weight: 700;
+    color: $badge-color;
+    background: $badge-bg;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: transform $transition-speed $transition-ease;
+  }
+}
+
+// ============================
+// Нижняя часть: текст + номер
+// ============================
+.patmentscard_wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  h1 {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 11px;
+    font-weight: 400;
+    color: $text-secondary;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+}
+
+
+.body{
+  display: flex;
+}

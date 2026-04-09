@@ -1,0 +1,72 @@
+// Переменные для цветов
+$bg-dark: #23232c; // Темный фон карточки (нижняя часть)
+$white: #ffffff; // Белый фон (верхняя часть)
+$accent-cyan: #17e1ff; // Голубой цвет для 1%
+$text-gray: #a1a1a6; // Серый текст для номера
+$main-text: #ffffff; // Белый текст для заголовка
+
+.patmentscard {
+  width: 100px;
+  border-radius: 13px;
+  overflow: hidden; // Чтобы углы обрезались
+  background-color: $bg-dark;
+  -webkit-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &-top {
+      background-color: $white;
+      height: 55px; // Высота белой части
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 10px;
+
+      p {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        background-color: $accent-cyan;
+        color: #000;
+        font-weight: bold;
+        padding: 1px 9px;
+        border-radius: 8px;
+        font-size: 12px;
+        margin: 0;
+      }
+
+      img {
+        max-width: 80%;
+        max-height: 50px;
+        object-fit: contain;
+      }
+    }
+
+    &-bottom {
+      text-align: center;
+      height: 55px;
+
+      h1 {
+        color: $main-text;
+        font-size: 11px;
+        margin: 0 0 5px 0;
+        font-weight: 500;
+      }
+
+      p {
+        color: $text-gray;
+        font-size: 11px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.swiper-wrapper{
+  padding-bottom: 5px;
+}
