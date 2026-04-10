@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.scss";
 import BannerSlider from "../swiper/BannerSlider.jsx";
 import Payments from "../payments/Payments.jsx";
+import Footer from "../footer/Footer.jsx";
 
 const HomeContent = () => {
   return (
@@ -35,7 +36,12 @@ const HomeContent = () => {
             <img src="./saved.svg" alt="" />
           </div>
         </div>
+
+        
       </div>
+      <div className="footer">
+          <Footer/>
+        </div>
     </div>
   );
 };

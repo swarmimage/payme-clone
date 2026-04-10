@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 import Cash from "../cash/Cash.jsx";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -29,12 +30,14 @@ const Hero = () => {
         </div>
 
         <div className="hero__actions">
-          <div className="hero__actions-item">
-            <div className="hero__actions-icon">
-              <img src="/card.svg" alt="" />
+          <Link to="/transfer">
+            <div className="hero__actions-item">
+              <div className="hero__actions-icon">
+                <img src="/card.svg" alt="" />
+              </div>
+              <p>Мои карты</p>
             </div>
-            <p>Мои карты</p>
-          </div>
+          </Link>
           <div className="hero__actions-item">
             <div className="hero__actions-icon">
               <img src="/go.svg" alt="" />
@@ -50,7 +53,7 @@ const Hero = () => {
         </div>
       </div>
 
-        <Cash />
+      <Cash />
     </div>
   );
 };
