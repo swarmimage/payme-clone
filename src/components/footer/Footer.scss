@@ -4,21 +4,40 @@
   align-items: center;
   background-color: #3f424b;
   justify-content: space-between;
-  
-    padding: 5px 8px 36px;
-  &_wrapper{
-    &-box{
+  flex-shrink: 0;
+  padding: 5px 8px calc(18px + env(safe-area-inset-bottom, 0px));
+
+  &_wrapper {
+    flex: 1;
+    text-decoration: none;
+
+    &-box {
       display: flex;
       align-items: center;
       flex-direction: column;
 
-      img{
+      img {
         width: 29px;
         height: 28px;
+        opacity: 0.6;
+        filter: grayscale(1);
+        transition: opacity 0.2s, filter 0.2s;
       }
-      p{
+      p {
         font-size: 11px;
         color: #838383;
+        transition: color 0.2s;
+      }
+
+      &.active {
+        img {
+          opacity: 1;
+          filter: none;
+        }
+        p {
+          color: #1ababa;
+          font-weight: 600;
+        }
       }
     }
   }

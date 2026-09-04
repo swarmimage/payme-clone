@@ -1,0 +1,140 @@
+$bg-page: #17171f;
+$bg-input: #0b0b10;
+$accent: #1ababa;
+$text-main: #ffffff;
+$text-secondary: #8b8b95;
+$danger: #ff5a5f;
+
+.card-transfer {
+  background-color: $bg-page;
+  box-sizing: border-box;
+  padding: 24px 0 32px;
+  font-family: "Inter", sans-serif;
+
+  &__container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+
+    h1 {
+      color: $text-main;
+      font-size: 19px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-back {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-main;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      color: $text-secondary;
+      font-size: 13px;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: $bg-input;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 14px 16px;
+      transition: border-color 0.2s;
+
+      &:focus-within {
+        border-color: $accent;
+      }
+
+      svg {
+        width: 24px;
+        height: 22px;
+        flex-shrink: 0;
+        color: $text-secondary;
+      }
+
+      input {
+        flex: 1;
+        min-width: 0;
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-main;
+        font-size: 15px;
+
+        &::placeholder {
+          color: #55555f;
+        }
+      }
+    }
+
+    &-suffix {
+      color: $text-secondary;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__error {
+    color: $danger;
+    font-size: 13px;
+    margin-top: -8px;
+  }
+
+  &__submit {
+    background-color: $accent;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 17px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: opacity 0.2s, transform 0.1s;
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):active {
+      transform: scale(0.98);
+    }
+  }
+}

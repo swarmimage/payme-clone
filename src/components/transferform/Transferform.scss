@@ -1,0 +1,232 @@
+$bg-page: #17171f;
+$bg-card: #26262f;
+$bg-input: #0b0b10;
+$accent: #1ababa;
+$text-main: #ffffff;
+$text-secondary: #8b8b95;
+$border: rgba(255, 255, 255, 0.06);
+
+.transfer {
+  background-color: $bg-page;
+  box-sizing: border-box;
+  padding: 24px 0 32px;
+  font-family: "Inter", sans-serif;
+
+  &__container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+
+    h1 {
+      color: $text-main;
+      font-size: 19px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-info {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $accent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: $bg-page;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__to {
+    margin-bottom: 22px;
+
+    h3 {
+      color: $text-main;
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    &-label {
+      display: block;
+      color: $text-secondary;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: $bg-input;
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: $text-secondary;
+
+      svg {
+        width: 26px;
+        height: 22px;
+        flex-shrink: 0;
+        color: $text-secondary;
+      }
+
+      input {
+        flex: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-main;
+        font-size: 15px;
+
+        &::placeholder {
+          color: #55555f;
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        color: $text-secondary;
+      }
+    }
+  }
+
+  &__recipients {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-bottom: 28px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      width: 66px;
+
+      p {
+        color: $text-secondary;
+        font-size: 12px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+    }
+
+    &-avatar {
+      position: relative;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    &-badge {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $accent;
+      border: 2px solid $bg-page;
+      color: #fff;
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__all {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: $accent;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 28px;
+    cursor: pointer;
+  }
+
+  &__menu {
+    background: $bg-card;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 16px;
+      border-bottom: 1px solid $border;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      p {
+        flex: 1;
+        color: $text-main;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+
+    &-icon {
+      width: 22px;
+      height: 22px;
+      color: $accent;
+      flex-shrink: 0;
+    }
+
+    &-chevron {
+      width: 18px;
+      height: 18px;
+      color: $text-secondary;
+      flex-shrink: 0;
+    }
+  }
+}

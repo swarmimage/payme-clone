@@ -1,0 +1,199 @@
+$bg-page: #17171f;
+$bg-card: #26262f;
+$bg-input: #0b0b10;
+$accent: #1ababa;
+$text-main: #ffffff;
+$text-secondary: #8b8b95;
+
+.payment {
+  background-color: $bg-page;
+  box-sizing: border-box;
+  padding: 24px 0 32px;
+  font-family: "Inter", sans-serif;
+
+  &__container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__title {
+    color: $text-main;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: $bg-input;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 26px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      color: $text-secondary;
+      flex-shrink: 0;
+    }
+
+    input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: $text-main;
+      font-size: 15px;
+
+      &::placeholder {
+        color: #55555f;
+      }
+    }
+  }
+
+  &__section {
+    margin-bottom: 28px;
+
+    &--last {
+      margin-bottom: 0;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+
+      h3 {
+        color: $text-main;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      span {
+        color: $accent;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    &-item {
+      position: relative;
+      background: $bg-card;
+      border-radius: 16px;
+      padding: 16px 8px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      svg {
+        width: 26px;
+        height: 26px;
+        color: $accent;
+      }
+
+      p {
+        color: $text-main;
+        font-size: 11.5px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.25;
+      }
+    }
+
+    &-badge {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background: #17e1ff;
+      color: #0b0b10;
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 20px;
+    }
+  }
+
+  &__home {
+    margin-bottom: 28px;
+
+    h3 {
+      color: $text-main;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    &-card {
+      background: $bg-card;
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      &-title {
+        color: $text-main;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      &-text {
+        color: $text-secondary;
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      button {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        color: $accent;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-row {
+      background: $bg-card;
+      border-radius: 16px;
+      padding: 14px 16px;
+      cursor: pointer;
+
+      &-title {
+        color: $text-main;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      &-text {
+        color: $text-secondary;
+        font-size: 12.5px;
+      }
+    }
+  }
+}
