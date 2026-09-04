@@ -1,13 +1,25 @@
 import React from "react";
 import "./Payment.scss";
 import Payments from "../payments/Payments.jsx";
-import { IconSearch, IconList, IconMobile, IconGlobe, IconHome } from "../icons/Icons.jsx";
+import {
+  IconSearch,
+  IconList,
+  IconMobile,
+  IconGlobe,
+  IconHome,
+  IconMoney,
+  IconDoc,
+  IconShield,
+} from "../icons/Icons.jsx";
 
 const services = [
   { id: 1, icon: IconList, badge: "1%", title: "Популярное" },
   { id: 2, icon: IconMobile, badge: "до 1.5%", title: "Мобильные операторы" },
   { id: 3, icon: IconGlobe, badge: "1%", title: "Интернет-провайдеры" },
   { id: 4, icon: IconHome, badge: "1%", title: "Коммунальные услуги" },
+  { id: 5, icon: IconMoney, badge: "0%", title: "Погашение кредита" },
+  { id: 6, icon: IconDoc, badge: "0%", title: "Госуслуги" },
+  { id: 7, icon: IconShield, badge: "1%", title: "Штрафы" },
 ];
 
 const nearby = [

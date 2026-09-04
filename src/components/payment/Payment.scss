@@ -85,12 +85,20 @@ $text-secondary: #8b8b95;
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 2px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &-item {
       position: relative;
+      flex: 0 0 82px;
+      scroll-snap-align: start;
       background: $bg-card;
       border-radius: 16px;
       padding: 16px 8px 12px;
